@@ -1,0 +1,13 @@
+version: '2.1'
+
+
+services:
+    twitter-scraper:
+        build: .
+        volumes:
+            - ./data:./data
+        container_name: twitter-scraper
+        restart: always
+        network_mode: "host"
+        env_file:
+        - .env
