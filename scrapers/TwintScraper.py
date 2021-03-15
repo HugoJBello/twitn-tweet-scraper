@@ -19,8 +19,12 @@ class TwintScraper:
 
     def scrap_account_period(self, account, since, until):
         c = twint.Config()
-
-        c.Username = account
+        print("--a-a-a-a-a-a-a-aa-a-")
+        if ("#" in account):
+            print("-aa--")
+            c.Search = account
+        else:
+            c.Username = account
         c.Store_csv = True
         filename = account + "_" + str(since) +"---" +str(until) +  ".csv"
         path = self.basepath + account

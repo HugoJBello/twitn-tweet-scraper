@@ -50,13 +50,9 @@ class AccountScrapper:
             print("scraping " + account.account + " in period ", since,until)
             print("************************************************************")
 
-            if account.scraper_type == "account":
-                self.scraper.scrap_one_iteration_index(account)
-                date_since = date_to - relativedelta(months=1)
-                account.update_date(date_since)
-
-            else :
-                print("----")
+            self.scraper.scrap_one_iteration_index(account)
+            date_since = date_to - relativedelta(months=1)
+            account.update_date(date_since)
 
         except:
             time.sleep(self.sleep_time_between_requests)

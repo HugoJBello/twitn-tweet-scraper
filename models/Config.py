@@ -17,6 +17,9 @@ class Config:
         self.load_from_env()
         self.refresh()
 
+        if (not os.getenv("lang") == None):
+            self.lang = os.getenv("lang")
+            print(self.lang)
 
     def load_from_env(self):
         self.account_list_file = os.getenv("account_list_file")
