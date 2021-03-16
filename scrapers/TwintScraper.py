@@ -29,6 +29,11 @@ class TwintScraper:
             print("lang set")
             c.Lang = lang
 
+        near = os.getenv("near")
+        if not near == None and not near == "":
+            print("near set", near)
+            c.Near = near
+
         c.Store_csv = True
         filename = account + "_" + str(since) +"---" +str(until) +  ".csv"
         path = self.basepath + account
