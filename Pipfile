@@ -14,4 +14,3 @@ python_version = "3.8"
 
 [packages.twint]
 git = "https://github.com/twintproject/twint.git"
-ref = "origin/master"
