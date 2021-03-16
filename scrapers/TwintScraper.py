@@ -21,10 +21,14 @@ class TwintScraper:
         c = twint.Config()
         print("--a-a-a-a-a-a-a-aa-a-")
         if ("#" in account):
-            print("-aa--")
             c.Search = account
         else:
             c.Username = account
+        lang = os.getenv("lang")
+        if not lang == None and not lang == "":
+            print("lang set")
+            c.Lang = lang
+
         c.Store_csv = True
         filename = account + "_" + str(since) +"---" +str(until) +  ".csv"
         path = self.basepath + account
