@@ -19,10 +19,10 @@ class TwintScraper:
 
     def scrap_account_period(self, account, since, until):
         c = twint.Config()
-        print("--a-a-a-a-a-a-a-aa-a-")
         if ("#" in account):
             c.Search = account
         else:
+            print(account)
             c.Username = account
         lang = os.getenv("lang")
         if not lang == None and not lang == "":
