@@ -7,6 +7,9 @@ venv/
 asoc_peru/
 empresas_peru/
 accounts/
+output/
+data/output/
+*_merged.csv
 # C extensions
 *.so
 .env_*

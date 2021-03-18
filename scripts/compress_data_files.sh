@@ -1,8 +1,7 @@
 cd ..
-cd data/accounts/scraper_news
+cd data/output
 for d in */; do
     echo $d
     zip -r ${d%/}.zip $d
-    mv ${d%/}.zip ../../zipped_data
 done
 
